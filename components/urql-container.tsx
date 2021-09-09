@@ -10,7 +10,7 @@ export function UrqlContainer({ children }: UrqlContainerProps) {
   const token = null;
   urqlClient = useMemo(() => {
     return createClient({
-      url: "https://fitting-chow-67.hasura.app/v1/graphql",
+      url: "https://t4sg-f21-1.hasura.app/v1/graphql",
       fetchOptions: () => {
         return {
           headers: {
