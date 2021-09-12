@@ -8,7 +8,6 @@ import {
   CardSubtitle,
   CardText,
 } from "reactstrap";
-import DeleteCase from "./DeleteCase";
 import { useQuery } from "urql";
 import { Box } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
