@@ -8,6 +8,7 @@ import {
   CardSubtitle,
   CardText,
 } from "reactstrap";
+import DeleteCase from "./DeleteCase";
 import { useQuery } from "urql";
 import { Box } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
@@ -23,6 +24,7 @@ export type CaseData = {
   id: number;
 };
 
+
 const CaseCard: React.FC<CaseCardProps> = (props) => {
   const caseData = props.data;
 
@@ -37,7 +39,7 @@ const CaseCard: React.FC<CaseCardProps> = (props) => {
             width="100%"
           >
             <CardTitle tag="h3">{caseData.name}</CardTitle>
-            <CloseIcon />
+            <button id="star" onClick={() => myFunction()}>X</button>
           </Box>
 
           <CardSubtitle tag="h6" className="mb-2 text-muted">
@@ -49,4 +51,9 @@ const CaseCard: React.FC<CaseCardProps> = (props) => {
     </Container>
   );
 };
+
+function myFunction() {
+  window.alert("Warning: you will be deleting this case.");
+}
+
 export default CaseCard;
